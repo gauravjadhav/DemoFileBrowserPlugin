@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.capgemini.plugins.filebrowser"
+        version="2.0.2">
+
+  <name>Video and Audio sync</name>
+
+  <description>
+    This plugin allows you to show a Toast.
+    A Toast is a little non intrusive buttonless popup which automatically disappears.
+  </description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.5.0"/>
+  </engines>
+
+  <js-module src="www/FileBrowser.js" name="FileBrowser">
+    <clobbers target="window.plugins.filebrowser" />
+  </js-module>
+
+  <js-module src="test/tests.js" name="tests">
+  </js-module>
+
+  <!-- ios -->
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="Toast">
+        <param name="ios-package" value="Toast"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/Toast+UIView.h"/>
+    <source-file src="src/ios/Toast+UIView.m"/>
+    <header-file src="src/ios/Toast.h"/>
+    <source-file src="src/ios/Toast.m"/>
+
+    <framework src="QuartzCore.framework" />
+  </platform>
+
+  <!-- android -->
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Toast">
+        <param name="android-package" value="com.capgemini.plugins.Toast" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/com/capgemini/plugins/FileBrowser.java" target-dir="src/com/capgemini/plugins"/>
+  </platform>
+
+  <!-- wp8 -->
+  <platform name="wp8">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Toast">
+        <param name="wp-package" value="Toast"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/wp8/Toast.cs" />
+  </platform>
+
+</plugin>
