@@ -47,7 +47,6 @@ import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.MimeTypeMap;
-import com.example.testfilepath.ImageFilePath;
 
 
 import android.annotation.SuppressLint;
