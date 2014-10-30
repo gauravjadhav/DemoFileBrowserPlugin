@@ -11,12 +11,12 @@ FileBrowser.prototype.showUpload = function (object, successCallback, errorCallb
 
 
 FileBrowser.install = function () {
-  if (!window.filebrowserplugin) {
-    window.filebrowserplugin = {};
+  if (!window.plugins) {
+    window.plugins = {};
   }
 
-  window.filebrowserplugin.filebrowser = new FileBrowser();
-  return window.filebrowserplugin.filebrowser;
+  window.plugins.filebrowser = new FileBrowser();
+  return window.plugins.filebrowser;
 };
 
 cordova.addConstructor(FileBrowser.install);

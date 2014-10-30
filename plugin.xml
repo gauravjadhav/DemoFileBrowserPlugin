@@ -18,7 +18,7 @@
   </engines>
 
   <js-module src="www/FileBrowser.js" name="FileBrowser">
-    <clobbers target="window.filebrowserplugin.filebrowser" />
+    <clobbers target="window.plugins.filebrowser" />
   </js-module>
 
   <js-module src="test/tests.js" name="tests">
