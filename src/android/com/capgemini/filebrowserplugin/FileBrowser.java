@@ -68,9 +68,10 @@ public class FileBrowser extends CordovaPlugin {
 			final CallbackContext callbackContext) throws JSONException {
 
 		mCallbackContext = callbackContext;
-		Intent i=  new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-		i.setType("image/* vidoe/*");
-		cordova.getActivity().startActivityForResult(i, GALLERY_INTENT_CALLED);
+//		Intent i=  new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+//		i.setType("image/* vidoe/*");
+//		cordova.getActivity().startActivityForResult(i, GALLERY_INTENT_CALLED);
+		mCallbackContext.success("start");
 		return true;
 
 	}
