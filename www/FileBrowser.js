@@ -6,7 +6,7 @@ FileBrowser.prototype.upload = function (successCallback, errorCallback) {
 };
 
 FileBrowser.prototype.showUpload = function (successCallback, errorCallback) {
-  this.show("", successCallback, errorCallback);
+  this.show(successCallback, errorCallback);
 };
 
 
