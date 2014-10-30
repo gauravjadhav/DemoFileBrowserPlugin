@@ -72,7 +72,7 @@ public class FileBrowser extends CordovaPlugin {
 		i.setType("image/* vidoe/*");
 		cordova.setActivityResultCallback(this); 
 		cordova.getActivity().startActivityForResult(i, GALLERY_INTENT_CALLED);
-		mCallbackContext.success("start");
+//		mCallbackContext.success("start");
 		return true;
 
 	}
