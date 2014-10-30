@@ -68,9 +68,9 @@ public class FileBrowser extends CordovaPlugin {
 			final CallbackContext callbackContext) throws JSONException {
 
 		mCallbackContext = callbackContext;
-//		Intent i=  new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//		i.setType("image/* vidoe/*");
-//		cordova.getActivity().startActivityForResult(i, GALLERY_INTENT_CALLED);
+		Intent i=  new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+		i.setType("image/* vidoe/*");
+		cordova.getActivity().startActivityForResult(i, GALLERY_INTENT_CALLED);
 		mCallbackContext.success("start");
 		return true;
 
@@ -78,6 +78,7 @@ public class FileBrowser extends CordovaPlugin {
 
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		mCallbackContext.success("in activity result :- " + resultCode);
 		if (resultCode == -1) {
 			if (requestCode == GALLERY_INTENT_CALLED) {
 				if (null == data)
