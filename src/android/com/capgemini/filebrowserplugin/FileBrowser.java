@@ -1,4 +1,4 @@
-package com.capgemini.plugins;
+package com.capgemini.filebrowserplugin;
 
 import android.view.Gravity;
 import org.apache.cordova.CallbackContext;
