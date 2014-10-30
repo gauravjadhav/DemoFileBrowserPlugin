@@ -79,7 +79,7 @@ public class FileBrowser extends CordovaPlugin {
 
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-		mCallbackContext.success("in activity result :- " + resultCode);
+//		mCallbackContext.success("in activity result :- " + resultCode);
 		if (resultCode == -1) {
 			if (requestCode == GALLERY_INTENT_CALLED) {
 				if (null == data)
