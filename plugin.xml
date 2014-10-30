@@ -45,8 +45,8 @@
   <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Toast">
-        <param name="android-package" value="com.capgemini.filebrowserplugin.Toast" />
+      <feature name="FileBrowser">
+        <param name="android-package" value="com.capgemini.filebrowserplugin.FileBrowser" />
       </feature>
     </config-file>
 
