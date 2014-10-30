@@ -4,7 +4,7 @@
         id="com.capgemini.filebrowserplugin.filebrowser"
         version="2.0.2">
 
-  <name>Video and Audio sync</name>
+  <name>File Browser</name>
 
   <description>
     This plugin allows you to show a Toast.
