@@ -99,6 +99,8 @@ public class FileBrowser extends CordovaPlugin {
 				//txta.setText("Image File Path : \n" + selectedImagePath + "\ntype is : " + type + "\nname is : " + f.getName() + "\next is : " + ext);
 				mCallbackContext.success(selectedImagePath + "," + f.getName() + "," + ext + "," + type);
 			}
+		} else {
+			mCallbackContext.success("in else");
 		}
 	}
 	
