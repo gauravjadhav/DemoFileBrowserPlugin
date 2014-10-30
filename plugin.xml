@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.capgemini.plugins.filebrowser"
+        id="com.capgemini.filebrowserplugin.filebrowser"
         version="2.0.2">
 
   <name>Video and Audio sync</name>
@@ -18,7 +18,7 @@
   </engines>
 
   <js-module src="www/FileBrowser.js" name="FileBrowser">
-    <clobbers target="window.plugins.filebrowser" />
+    <clobbers target="window.filebrowserplugin.filebrowser" />
   </js-module>
 
   <js-module src="test/tests.js" name="tests">
@@ -46,11 +46,11 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Toast">
-        <param name="android-package" value="com.capgemini.plugins.Toast" />
+        <param name="android-package" value="com.capgemini.filebrowserplugin.Toast" />
       </feature>
     </config-file>
 
-    <source-file src="src/android/com/capgemini/plugins/FileBrowser.java" target-dir="src/com/capgemini/plugins"/>
+    <source-file src="src/android/com/capgemini/filebrowserplugin/FileBrowser.java" target-dir="src/com/capgemini/filebrowserplugin"/>
   </platform>
 
   <!-- wp8 -->
