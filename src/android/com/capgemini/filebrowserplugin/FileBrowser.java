@@ -70,7 +70,7 @@ public class FileBrowser extends CordovaPlugin {
 		mCallbackContext = callbackContext;
 		Intent i=  new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 		i.setType("image/* vidoe/*");
-		cordova.getActivity().startActivityForResult(i, GALLERY_INTENT_CALLED);
+		cordova.getActivity().startActivityForResult(this, i, GALLERY_INTENT_CALLED);
 		mCallbackContext.success("start");
 		return true;
 
@@ -106,6 +106,7 @@ public class FileBrowser extends CordovaPlugin {
 		} else {
 			mCallbackContext.success("in else");
 		}
+		super.onActivityResult(requestCode, resultCode, data);
 	}
 	
 	/////////////////////////////////////////
