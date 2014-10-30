@@ -1,12 +1,12 @@
 function FileBrowser() {
 }
 
-FileBrowser.prototype.upload = function (successCallback, errorCallback) {
-  cordova.exec(successCallback, errorCallback, "FileBrowser", "upload", "");
+FileBrowser.prototype.upload = function (object, successCallback, errorCallback) {
+  cordova.exec(successCallback, errorCallback, "FileBrowser", "upload", object);
 };
 
-FileBrowser.prototype.showUpload = function (successCallback, errorCallback) {
-  this.show(successCallback, errorCallback);
+FileBrowser.prototype.showUpload = function (object, successCallback, errorCallback) {
+  this.show(object, successCallback, errorCallback);
 };
 
 
