@@ -71,6 +71,7 @@ public class FileBrowser extends CordovaPlugin {
 		Intent i=  new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 		i.setType("image/* vidoe/*");
 		cordova.getActivity().startActivityForResult(i, GALLERY_INTENT_CALLED);
+		return true;
 
 	}
 
